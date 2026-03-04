@@ -11137,7 +11137,23 @@ function om() {
 								}), s.jsx("span", {
 									"code-path": "src/sections/Team.tsx:113:21",
 									className: "text-sm text-[#6b7280] hover:underline cursor-pointer",
-									onClick: () => window.open("#", "_blank"),
+									onClick: () => {
+  const escolha = window.prompt(
+    "Digite:\n1 para falar com Dr. Carlos\n2 para falar com Dra. Joice"
+  );
+
+  let numero = "";
+
+  if (escolha === "1") {
+    numero = "5564984047829"; // Dr. Carlos
+  } else if (escolha === "2") {
+    numero = "5564984161950"; // Dra. Joice
+  } else {
+    return; // cancela se não escolher corretamente
+  }
+
+  window.open(`https://wa.me/${numero}`, "_blank");
+},
 									children: "Fale no WhatsApp"
 								})]
 							})]
