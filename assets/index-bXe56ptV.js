@@ -11138,21 +11138,21 @@ function om() {
 									"code-path": "src/sections/Team.tsx:113:21",
 									className: "text-sm text-[#6b7280] hover:underline cursor-pointer",
 									onClick: () => {
-  const escolha = window.prompt(
-    "Digite:\n1 para falar com Dr. Carlos Magnum\n2 para falar com Dra. Joice Elizabeth"
-  );
+  const escolha = window
+    .prompt("Digite:\n1 para Dr. Carlos Magnum\n2 para Dra. Joice Elizabeth")
+    ?.trim();
 
   let numero = "";
 
   if (escolha === "1") {
-    numero = "5564984047829"; // Dr. Carlos Magnum
+    numero = "5564984047829";
   } else if (escolha === "2") {
-    numero = "5564984161950"; // Dra. Joice Elizabeth
+    numero = "5564984161950";
   } else {
-    return; // cancela se não escolher corretamente
+    return;
   }
 
-  window.open(`https://wa.me/${numero}`, "_blank");
+  window.location.href = `https://wa.me/${numero}`;
 },
 									children: "Fale no WhatsApp"
 								})]
