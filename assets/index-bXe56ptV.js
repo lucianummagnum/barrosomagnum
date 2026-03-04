@@ -10540,7 +10540,7 @@ function im() {
 						children: "Tradição e Inovação em Advocacia"
 					}), s.jsxs("div", {
 						"code-path": "src/sections/About.tsx:120:13",
-	className: "space-y-4 text-[#6b7280] leading-relaxed mb-8 text-justify",
+	className: "space-y-4 text-[#6b7280] leading-relaxed mb-8", style: { textAlign: "justify" },
 	children: [
 		s.jsxs("p", {
 			"code-path": "src/sections/About.tsx:121:15",
