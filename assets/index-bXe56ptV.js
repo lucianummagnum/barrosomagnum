@@ -10537,7 +10537,7 @@ function im() {
 					children: [s.jsx("h3", {
 						"code-path": "src/sections/About.tsx:116:13",
 						className: "font-['Playfair_Display'] text-3xl font-bold text-[#1a1f2e] mb-6",
-						children: "Tradição e Inovação em Advocacia"
+						children: "TRADIÇÃO E INOVAÇÃO EM ADVOCACIA"
 					}), s.jsxs("div", {
 						"code-path": "src/sections/About.tsx:120:13",
 						className: "space-y-4 text-[#6b7280] leading-relaxed mb-8",
