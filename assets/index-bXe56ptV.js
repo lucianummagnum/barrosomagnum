@@ -10543,7 +10543,7 @@ function im() {
 						className: "space-y-4 text-[#6b7280] leading-relaxed mb-8",
 						children: [s.jsxs("p", {
 							{
-	""code-path": "src/sections/About.tsx:121:15",
+	"code-path": "src/sections/About.tsx:121:15",
 	children: ["Fundado em 2013 em Quirinópolis, Goiás, o escritório ", s.jsx("strong", {
 		"code-path": "src/sections/About.tsx:122:70",
 		className: "text-[#1a1f2e]",
