@@ -10674,7 +10674,7 @@ function sm() {
 			size: 40
 		}),
 		title: "Atendimento de Urgência",
-		description: "Assistência imediata em casos de demissão imotivada, doença ocupacional e cessação indevida de benefícios.",
+		description: "Assistência imediata em casos de acidente do trabalho, doença ocupacional e cessação indevida de benefícios.",
 		color: "from-red-500/20 to-red-600/10"
 	}];
 	return s.jsxs("section", {
