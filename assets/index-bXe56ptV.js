@@ -10180,7 +10180,7 @@ function nm() {
 						}), " ", "trabalhistas e previdenciários"]
 					}), s.jsx("p", {
 						"code-path": "src/sections/Hero.tsx:75:13",
-						className: "animate-on-scroll fade-in stagger-2 text-lg sm:text-xl text-white/70 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0",
+						className: "animate-on-scroll fade-in stagger-2 text-lg sm:text-xl text-white/70 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0",style: { textAlign: "justify" },
 						children: "Combinamos conhecimento técnico, vasta experiência e tecnologia de ponta para oferecer soluções jurídicas personalizadas em todo o Brasil."
 					}), s.jsxs("div", {
 						"code-path": "src/sections/Hero.tsx:79:13",
