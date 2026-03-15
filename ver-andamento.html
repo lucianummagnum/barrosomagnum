@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Consulte o andamento processual do seu caso diretamente no Tribunal Regional do Trabalho do seu estado." />
+  <meta name="keywords" content="andamento processual, TRT, consulta processo, Justiça do Trabalho" />
+  <meta name="author" content="Barroso & Magnum Assessoria Empresarial LTDA" />
+  <meta name="theme-color" content="#1a1f2e" />
+  <link rel="icon" type="image/png" href="./images/logo.png" />
+  <title>Ver Andamento Processual | Barroso & Magnum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="./assets/andamento.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar scrolled">
+    <div class="nav-container">
+      <a href="./index.html" class="nav-logo">
+        <img src="./images/logo.png" alt="Barroso & Magnum" class="nav-logo-img" />
+        <span class="nav-logo-text">Barroso & Magnum Advocacia</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="./index.html#home">INÍCIO</a>
+        <a href="./index.html#sobre">SOBRE</a>
+        <a href="./index.html#servicos">SERVIÇOS</a>
+        <a href="./index.html#atuacao">ATUAÇÃO</a>
+        <a href="./index.html#equipe">EQUIPE</a>
+        <a href="./ver-andamento.html">VER ANDAMENTO</a>
+        <a href="./ver-andamento.html" class="nav-btn-consulta">CONSULTA</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="andamento-hero">
+      <div class="andamento-hero-content">
+        <span class="section-label-pill">CONSULTA PROCESSUAL</span>
+        <h1 class="andamento-hero-title">Ver Andamento <span class="gold-text">Processual</span></h1>
+        <p class="andamento-hero-desc">Clique no estado do mapa ou selecione abaixo para consultar seu processo no Tribunal Regional do Trabalho correspondente.</p>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="map-container">
+        <div class="map-wrapper">
+          <img src="./images/mapa-brasil.png" alt="Mapa do Brasil" class="mapa-background">
+          <div id="tooltip" class="map-tooltip" role="tooltip" aria-hidden="true">Consultar processos no TRT deste estado</div>
+          <svg id="brazilMap" viewBox="0 0 800 750" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa interativo do Brasil com estados clicáveis">
+            <!-- AM - Amazonas -->
+            <path id="AM" class="state" d="M120,80 L220,60 L280,80 L300,120 L280,180 L300,220 L260,260 L200,260 L140,240 L100,200 L80,140 Z" data-state="AM" tabindex="0" aria-label="Amazonas - TRT 11"/>
+            <!-- PA - Pará -->
+            <path id="PA" class="state" d="M300,120 L400,100 L460,120 L480,180 L460,240 L400,280 L340,260 L300,220 L280,180 Z" data-state="PA" tabindex="0" aria-label="Pará - TRT 8"/>
+            <!-- RR - Roraima -->
+            <path id="RR" class="state" d="M180,20 L240,10 L260,40 L240,70 L200,70 L170,50 Z" data-state="RR" tabindex="0" aria-label="Roraima - TRT 11"/>
+            <!-- AP - Amapá -->
+            <path id="AP" class="state" d="M360,30 L400,20 L420,50 L400,90 L370,80 L350,60 Z" data-state="AP" tabindex="0" aria-label="Amapá - TRT 8"/>
+            <!-- AC - Acre -->
+            <path id="AC" class="state" d="M40,200 L100,190 L130,220 L110,260 L60,260 L30,240 Z" data-state="AC" tabindex="0" aria-label="Acre - TRT 14"/>
+            <!-- RO - Rondônia -->
+            <path id="RO" class="state" d="M140,240 L200,230 L230,270 L210,310 L160,310 L130,280 Z" data-state="RO" tabindex="0" aria-label="Rondônia - TRT 14"/>
+            <!-- MT - Mato Grosso -->
+            <path id="MT" class="state" d="M230,270 L340,260 L380,300 L380,380 L320,400 L260,380 L230,340 Z" data-state="MT" tabindex="0" aria-label="Mato Grosso - TRT 23"/>
+            <!-- TO - Tocantins -->
+            <path id="TO" class="state" d="M400,240 L440,230 L460,280 L450,340 L420,360 L390,340 L380,300 Z" data-state="TO" tabindex="0" aria-label="Tocantins - TRT 10"/>
+            <!-- MA - Maranhão -->
+            <path id="MA" class="state" d="M460,120 L530,110 L560,150 L540,200 L500,220 L460,210 L450,170 Z" data-state="MA" tabindex="0" aria-label="Maranhão - TRT 16"/>
+            <!-- PI - Piauí -->
+            <path id="PI" class="state" d="M500,200 L540,190 L560,230 L550,280 L520,300 L490,280 L480,240 Z" data-state="PI" tabindex="0" aria-label="Piauí - TRT 22"/>
+            <!-- CE - Ceará -->
+            <path id="CE" class="state" d="M560,140 L620,130 L640,170 L620,210 L580,210 L560,180 Z" data-state="CE" tabindex="0" aria-label="Ceará - TRT 7"/>
+            <!-- RN - Rio Grande do Norte -->
+            <path id="RN" class="state" d="M640,160 L690,150 L700,180 L680,200 L650,200 L640,180 Z" data-state="RN" tabindex="0" aria-label="Rio Grande do Norte - TRT 21"/>
+            <!-- PB - Paraíba -->
+            <path id="PB" class="state" d="M640,200 L700,195 L710,220 L690,235 L650,235 L635,220 Z" data-state="PB" tabindex="0" aria-label="Paraíba - TRT 13"/>
+            <!-- PE - Pernambuco -->
+            <path id="PE" class="state" d="M560,230 L640,225 L700,240 L700,270 L640,270 L560,260 Z" data-state="PE" tabindex="0" aria-label="Pernambuco - TRT 6"/>
+            <!-- AL - Alagoas -->
+            <path id="AL" class="state" d="M660,270 L700,265 L710,290 L690,300 L665,295 Z" data-state="AL" tabindex="0" aria-label="Alagoas - TRT 19"/>
+            <!-- SE - Sergipe -->
+            <path id="SE" class="state" d="M650,300 L685,295 L690,320 L670,330 L650,320 Z" data-state="SE" tabindex="0" aria-label="Sergipe - TRT 20"/>
+            <!-- BA - Bahia -->
+            <path id="BA" class="state" d="M460,280 L550,270 L620,280 L650,320 L640,400 L580,430 L500,420 L460,380 L440,340 Z" data-state="BA" tabindex="0" aria-label="Bahia - TRT 5"/>
+            <!-- GO - Goiás -->
+            <path id="GO" class="state" d="M380,360 L440,340 L460,380 L450,430 L410,450 L370,430 L360,390 Z" data-state="GO" tabindex="0" aria-label="Goiás - TRT 18"/>
+            <!-- DF - Distrito Federal -->
+            <circle id="DF" class="state state-df" cx="435" cy="395" r="12" data-state="DF" tabindex="0" aria-label="Distrito Federal - TRT 10"/>
+            <!-- MG - Minas Gerais -->
+            <path id="MG" class="state" d="M450,430 L540,420 L600,440 L620,490 L580,530 L520,540 L470,520 L440,480 Z" data-state="MG" tabindex="0" aria-label="Minas Gerais - TRT 3"/>
+            <!-- ES - Espírito Santo -->
+            <path id="ES" class="state" d="M620,440 L660,430 L670,470 L650,500 L620,490 Z" data-state="ES" tabindex="0" aria-label="Espírito Santo - TRT 17"/>
+            <!-- RJ - Rio de Janeiro -->
+            <path id="RJ" class="state" d="M570,530 L620,520 L650,540 L640,570 L600,570 L570,555 Z" data-state="RJ" tabindex="0" aria-label="Rio de Janeiro - TRT 1"/>
+            <!-- SP - São Paulo -->
+            <path id="SP" class="state" d="M400,470 L470,460 L530,480 L540,540 L500,570 L440,560 L400,530 Z" data-state="SP" tabindex="0" aria-label="São Paulo - TRT 2/15"/>
+            <!-- MS - Mato Grosso do Sul -->
+            <path id="MS" class="state" d="M300,400 L370,390 L400,430 L400,490 L360,520 L300,510 L280,460 Z" data-state="MS" tabindex="0" aria-label="Mato Grosso do Sul - TRT 24"/>
+            <!-- PR - Paraná -->
+            <path id="PR" class="state" d="M360,520 L440,510 L480,540 L470,590 L410,610 L360,590 Z" data-state="PR" tabindex="0" aria-label="Paraná - TRT 9"/>
+            <!-- SC - Santa Catarina -->
+            <path id="SC" class="state" d="M390,610 L460,600 L480,630 L460,660 L410,660 L390,640 Z" data-state="SC" tabindex="0" aria-label="Santa Catarina - TRT 12"/>
+            <!-- RS - Rio Grande do Sul -->
+            <path id="RS" class="state" d="M350,650 L420,640 L460,660 L450,710 L400,730 L350,710 L330,680 Z" data-state="RS" tabindex="0" aria-label="Rio Grande do Sul - TRT 4"/>
+          </svg>
+        </div>
+
+        <!-- State List (mobile alternative) -->
+        <div class="states-list-wrapper">
+          <h3>Selecione o Estado</h3>
+          <p class="states-list-desc">Clique no estado para consultar o andamento processual no TRT correspondente.</p>
+          <div class="states-grid" id="statesGrid" role="list" aria-label="Lista de estados brasileiros">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="andamento-info">
+      <div class="section-container">
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A961" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h4>Como consultar?</h4>
+            <p>Selecione o estado no mapa ou na lista. Você será redirecionado ao sistema oficial do TRT, onde poderá consultar usando o número do processo.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A961" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Sistemas oficiais</h4>
+            <p>Todos os links direcionam para os sistemas oficiais PJe dos Tribunais Regionais do Trabalho, garantindo segurança e confiabilidade.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A961" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h4>Precisa de ajuda?</h4>
+            <p>Se tiver dificuldades na consulta ou precisar de orientação, entre em contato conosco pelo WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as index) -->
+  <footer class="footer">
+    <div class="footer-pattern"></div>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <div class="footer-logo">
+            <img src="./images/logo.png" alt="Barroso & Magnum" />
+          </div>
+          <p class="footer-desc">Excelência em advocacia trabalhista e previdenciária. Protegendo seus direitos com tradição, inovação e comprometimento desde 2013.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram" class="social-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="https://wa.me/5564984047829" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-btn whatsapp-social"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="./index.html#home">Início</a></li>
+            <li><a href="./index.html#sobre">Sobre Nós</a></li>
+            <li><a href="./index.html#servicos">Serviços</a></li>
+            <li><a href="./index.html#equipe">Equipe</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="./index.html#servicos">Direito do Trabalho</a></li>
+            <li><a href="./index.html#servicos">Direito Previdenciário</a></li>
+            <li><a href="./index.html#servicos">Consultoria Empresarial</a></li>
+            <li><a href="./index.html#atuacao">Atendimento Virtual</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-label">ENDEREÇOS</span>
+              <strong>Quirinópolis – GO</strong>
+              Avenida Brasil, 271B – Centro
+            </li>
+            <li>
+              <strong>Rio Verde – GO</strong>
+              Esq. C – R. Seis, Rua 09, QD 12, LT 01, Parte A – Bairro Promissão
+            </li>
+
+            <li>
+              <span class="footer-contact-label">WHATSAPP</span>
+              <a href="https://wa.me/5564984047829" target="_blank" rel="noopener noreferrer">(64) 98404-7829</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Barroso & Magnum Assessoria Empresarial LTDA. Todos os direitos reservados.</p>
+        <p class="footer-cnpj">CNPJ: 18.749.993/0001-64</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/main.js"></script>
+  <script src="./assets/andamento.js"></script>
+</body>
+</html>
