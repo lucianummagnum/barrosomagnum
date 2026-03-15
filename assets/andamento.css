@@ -1,0 +1,286 @@
+/* ============================================
+   Ver Andamento Processual - Styles
+   ============================================ */
+
+.andamento-hero {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
+  padding: 10rem 1rem 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.andamento-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: radial-gradient(circle at 2px 2px, rgba(201, 169, 97, 0.5) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.andamento-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.andamento-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+.andamento-hero-desc {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Map Section */
+.map-section {
+  background: #f8f6f3;
+  padding: 4rem 1rem;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.map-wrapper {
+  position: relative;
+  background: #1a1f2e; /* Dark background matching the image */
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapa-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.map-tooltip {
+  position: absolute;
+  background: #1a1f2e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 100;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.map-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #1a1f2e;
+}
+
+#brazilMap {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.state {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.state:hover,
+.state:focus {
+  fill: rgba(201, 169, 97, 0.2); /* Subtle highlight on hover */
+  stroke: #C9A961;
+  stroke-width: 2;
+  opacity: 1;
+  outline: none;
+}
+
+.state:focus-visible {
+  outline: 3px solid #C9A961;
+  outline-offset: 2px;
+}
+
+.state-df {
+  fill: transparent;
+  stroke: transparent;
+}
+
+/* State labels on map */
+.state-label {
+  font-size: 10px;
+  fill: #1a1f2e;
+  text-anchor: middle;
+  pointer-events: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+/* States List */
+.states-list-wrapper {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.states-list-wrapper h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1f2e;
+  margin-bottom: 0.5rem;
+}
+
+.states-list-desc {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.states-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.state-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: #f8f6f3;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.state-list-item:hover,
+.state-list-item:focus {
+  background: rgba(201, 169, 97, 0.1);
+  border-color: #C9A961;
+  outline: none;
+}
+
+.state-list-item .state-name {
+  font-weight: 500;
+  color: #1a1f2e;
+  font-size: 0.9rem;
+}
+
+.state-list-item .state-trt {
+  color: #C9A961;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.state-list-item .state-arrow {
+  color: #C9A961;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.state-list-item:hover .state-arrow {
+  transform: translateX(4px);
+}
+
+/* Info Section */
+.andamento-info {
+  background: #fff;
+  padding: 4rem 0;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f8f6f3;
+  transition: all 0.3s;
+}
+
+.info-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.info-card-icon {
+  margin-bottom: 1rem;
+}
+
+.info-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1f2e;
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .map-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .andamento-hero-title {
+    font-size: 2rem;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .map-wrapper {
+    padding: 1rem;
+  }
+}
